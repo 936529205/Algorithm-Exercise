@@ -1,0 +1,42 @@
+using System;
+
+namespace ExerciseDay1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   //01
+            Console.WriteLine("请输入三个数字:");
+            String a = Console.ReadLine();
+            String b = Console.ReadLine();
+            String c = Console.ReadLine();
+            double a1 = Convert.ToDouble(a);//类型转换
+            double b1 = Convert.ToDouble(b);
+            double c1 = Convert.ToDouble(c);
+            double t;
+            if (a1 < b1)//利用中间变量t交换两个变量的值
+            {
+                t = a1;
+                a1 = b1;
+                b1 = t;
+            }
+            if (a1 < c1)
+            {
+                t = a1;
+                a1 = c1;
+                c1 = t;
+            }
+            if (b1 < c1)
+            {
+                t = c1;
+                c1 = b1;
+                b1 = t;
+            }
+            Console.WriteLine("从大到小的顺序是{0},{1},{2}", a1, b1, c1);
+            Console.ReadKey();
+
+
+           
+        }
+    }
+}
