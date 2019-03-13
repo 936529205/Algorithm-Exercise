@@ -1,0 +1,37 @@
+using System;
+
+namespace ExerciseDay1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {//已知三角形三边长求面积
+            
+
+            Console.WriteLine("请输入三角形三边长分别为：");
+            String a1 = Console.ReadLine();
+            String b1 = Console.ReadLine();
+            String c1 = Console.ReadLine();
+            double a = Convert.ToDouble(a1);
+            double b = Convert.ToDouble(b1);
+            double c = Convert.ToDouble(c1);
+            if ((a + b) > c && (a + c) > b && (b + c) > a)
+            //海伦公式
+            {
+                double S;
+                S = System.Math.Sqrt(((a + b + c) * (a + b - c) * (a + c - b) * (b + c - a)) / 4);
+                Console.WriteLine(S);
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("三边不构成三角形");
+                Console.ReadKey();
+            }
+}
+        
+    }
+}
+
+   
