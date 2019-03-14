@@ -1,0 +1,49 @@
+using System;
+
+namespace ExerciseDay1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {//给定一个正整数，求他的位数并分别输出每一个数字
+            Console.WriteLine("请输入正整数：");
+            string a = Console.ReadLine();
+            int m = a.Length;
+            Console.WriteLine("位数是：{0}",m); 
+            Console.WriteLine("每一位分别是：");
+            for (int i =0;i<m;i++)
+            { 
+                Console.WriteLine(a[i]);
+            }
+            Console.ReadKey();
+        }
+        
+    }
+}
+
+   
+using System;
+
+namespace ExerciseDay1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {//200以内不能被3整除的数
+            for (int i=0;i<=200;i++)
+            {
+                if (i % 3 != 0)
+                {
+                    Console.WriteLine(i);
+
+                }
+            }
+            Console.ReadKey();
+        }
+        
+    }
+}
+
+   
