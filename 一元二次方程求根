@@ -1,0 +1,36 @@
+using System;
+
+namespace ExerciseDay1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {//一元二次方程求根
+            Console.WriteLine("一元二次方程ax^2+bx+c=0由键盘输入a、b、c");
+            Console.WriteLine("请输入a：");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("请输入b：");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("请输入c：");
+            double c = Convert.ToDouble(Console.ReadLine());
+            double x1, x2, q;
+            q = b * b - 4 * a * c;
+            if (q >= 0) { 
+            x1 = (-b + Math.Sqrt(q)) / 2 * a;
+            x2 = (-b - Math.Sqrt(q)) / 2 * a;
+                 
+            Console.WriteLine("方程的根是分别是{0}{1}",x1,x2);
+            }
+            else
+            {
+                Console.WriteLine("方程无解");
+            }
+            Console.ReadKey();
+        }
+        }
+        
+    }
+
+
+   
