@@ -1,0 +1,67 @@
+using System;
+
+
+
+namespace ExerciseDay1
+
+{
+
+    class Program
+
+    {
+
+
+
+        static void Main(string[] args)
+
+        {//求两个数的最大公约数。。辗转相除
+
+            Console.WriteLine("输入第一个数：");
+
+            int num1=int.Parse(Console.ReadLine());
+
+            Console.WriteLine("输入第二个数：");
+
+            int num2 = int.Parse(Console.ReadLine());
+
+            int tmp;
+
+            if (num1 < num2)
+
+            {
+
+                tmp = num1;
+
+                num1 = num2;
+
+                num2 = tmp;
+
+            }
+
+            while (num2 != 0)
+
+            {
+
+                tmp = num1 % num2;
+
+                num1 = num2;
+
+                num2 = tmp;
+
+            }
+
+            Console.WriteLine("最大公约数是{0}",num1);
+
+            Console.ReadKey();
+
+        }
+
+        
+
+    }
+
+}
+
+//最小公倍数算法：两个原数相乘除以最大公约数
+
+   
