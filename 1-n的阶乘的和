@@ -1,0 +1,39 @@
+using System;
+
+namespace ExerciseDay1
+{
+   
+    class Program
+    {
+
+        static void Main(string[] args)
+        {//求阶乘
+            Console.Write("请输入n:");
+            double n = Convert.ToInt16(Console.ReadLine());
+            double Factorial=1;
+            int i ;
+            double sum = 0;
+            for ( i = 1; i <= n; i++)
+            {
+
+                for (int m = 1; m <= i; m++)
+
+                {
+
+                    Factorial *= m;
+                   
+
+                }
+                sum += Factorial;
+                Factorial = 1;//需要将阶乘的值初始化
+            }
+            Console.Write("1到{0}的阶乘之和为：{1}",n,sum);
+            Console.ReadKey();
+            
+        }
+        }
+        
+    }
+
+
+   
