@@ -59,4 +59,80 @@ namespace ExerciseDay1
     }
 
 }
-   
+
+
+
+//1-100的素数每5个一行
+using System;
+
+
+
+namespace ExerciseDay1
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {   //100-200素数
+
+            int num = 0;  
+                
+            for (var i = 1; i <= 100; i++)
+
+            {
+
+                //flag 为标志位
+
+                var flag = true;
+
+                //从2开是循环 如果2到本身之间有一个数能将其整除那么这个数就不是素数，就跳出循环
+
+                for (var j = 2; j < i; j++)
+
+                {
+
+                    if (i % j == 0)
+
+                    {
+
+                        //不是素数标志位设为 flase 
+
+                        flag = false;
+
+                        break;
+
+                    }
+
+                }
+
+                //标志位是true时才会输出 i
+
+                if (flag)
+
+                {
+                    num++;
+                    Console.Write(i+" ");
+                    if (num % 5 == 0)
+                    {
+                        Console.WriteLine();
+                    }
+
+                }
+
+            }
+
+            Console.ReadKey();
+
+            
+            }
+        }
+
+    
+
+
+
+}
